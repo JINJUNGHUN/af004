@@ -1,0 +1,107 @@
+.navbar {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 410px) {
+  .navbar-brand>img {
+    padding: 15px;
+    width: 300px !important;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 510px) {
+  .navbar-brand>img {
+    padding: 15px;
+    width: 350px !important;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .navbar-brand>img {
+    padding-top: 10px;
+    width: 380px !important;
+  }
+}
+
+
+.navbar-toggler{
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+
+#navbarSupportedContent {
+  text-align: right;
+  padding-right: 0px;
+}
+
+.login-info {
+  font-family: NanumBarunGothicOTF;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  margin-top: 10px;
+  text-align: -webkit-right;
+}
+
+.login-info a {
+  font-family: NanumBarunGothicOTF;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+}
+
+.welcome {
+  font-family: NanumBarunGothicOTF;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  padding-bottom: 5px;
+}
+
+.create-button {
+  text-align: center;
+  font-family: NanumBarunGothicOTF;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: #151515;
+  width: 170px;
+  height: 40px;
+  border-radius: 13px;
+  padding-top: 3px;
+}
+
+.create-button a {
+  font-family: NanumBarunGothicOTF;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: relative;
+  top: 10%;
+
+}

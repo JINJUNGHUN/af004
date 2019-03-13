@@ -1,0 +1,34 @@
+<div class="container" style="text-align: center">
+  <div class="wrapper">
+    <div class="form-signin">
+      <h2 class="form-signin-heading">회원가입</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true, method: :post}) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :email, input_html: { autocomplete: "email", class: "form-control", placeholder: "이메일" }, required: true, autofocus: true, label: false %>
+        <%= f.input :nickname, input_html: { autocomplete: "nickname", class: "form-control", placeholder: "닉네임", id: "nickname-form"}, required: true, label: false %>
+        <%= f.input :password, input_html: { autocomplete: "new-password", class:"form-control", placeholder: "비밀번호" }, required: true, label: false %>
+        <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "form-control", placeholder: "비밀번호 확인" }, label: false %>
+
+      <div class="form-actions">
+        <%= f.button :submit, "회원가입", class: "btn btn-lg btn-primary btn-block"%>
+
+
+        <hr>
+
+        <%- if devise_mapping.omniauthable? %>
+
+        <%= link_to user_google_oauth2_omniauth_authorize_path, class: "btn btn-lg btn-primary btn-block", id: "new-registrantion-google" do %>
+        <i class="fab fa-google"></i> | 구글계정으로 로그인하기
+        <% end %>
+
+        <% end %>
+
+      </div>
+
+      <% end %> <!-- simple_form_for do |f| -->
+
+    </div>
+  </div>
+</div>

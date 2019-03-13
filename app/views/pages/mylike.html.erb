@@ -1,0 +1,41 @@
+<!-- 유저 id가 존재하고, 해당 유저가 like 한 포스트에 대하여 뿌려 주어야함. -->
+<h2 class="text-center" style="margin-top: 30px; margin-bottom: 30px;">내가 찜한 레시피</h2>
+  <% if @posts %>
+    <div class="container" style="text-align: right;">
+      <div class="row">
+        <% @posts.each do |post| %>
+            <div class="col-md-3">
+              <div class="recipe-box">
+                  <% if post.image? %>
+                    <%= link_to (image_tag post.image.url, class: "recipe-index"), post %>
+                  <% end %>
+                <ul>
+                  <li><%=link_to post.title, post %></li>
+                    <div class="option">
+                      <div class="index-temperature">
+                        온도<br>
+                        <div class="text-temperature">
+                        <%= post.temperature %>
+                        </div>
+                      </div>
+                      <div class="index-time">
+                        시간<br>
+                        <div class="text-time">
+                        <%= post.time %>
+                        </div>
+                      </div>
+                      <div class="option-count">
+                        <i class="fas fa-heart"></i>
+                        <%= post.likes.size %>
+                        <i class="fas fa-eye" style="padding-left: 5px;"></i>
+                        <%= "#{post.impressionist_count}" %>
+                      </div>
+                    </div>
+                </ul>
+              </div> <!--/recipe-box-->
+            </div> <!--/col-md-3-->
+        <% end %>
+      </div> <!--/row-->
+    </div> <!--/container-->
+  <% end %>
+<br>
